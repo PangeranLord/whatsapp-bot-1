@@ -1,19 +1,19 @@
-let handler = async (m, { conn, args }) => {
-  if (m.quoted) {
-    await conn.groupRemove(m.chat, [m.quoted.sender])
-    conn.reply(conn.user.jid, `@${m.sender.split`@`[0]} kick @${m.quoted.sender.split`@`[0]}`, m)
-  }
-  let ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
-  let users = m.mentionedJid.filter(u => !(u == ownerGroup || u.includes(conn.user.jid)))
-  for (let user of users) if (user.endsWith('@s.whatsapp.net')) await conn.groupRemove(m.chat, [user])
+let handler = async (m, { conn }) => {
+let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.qouted ? m.quoted.sender : ''
+await conn.groupRemove(m.chat, [who || m.quoted.sender])
 }
-handler.help = ['kick', '-'].map(v => v + ' @user')
-handler.tags = ['admin']
-handler.command = /^(kick|\-)$/i
+handler.help = ['kick']
+
+handler.tags = ['mods', 'admin']
+handler.command = /^(kick|rk|k|\-)$/i
 
 handler.group = true
+handler.private = false
+handler.premium = false
+
+handler.admin = true
 handler.botAdmin = true
 
-handler.limit = true
+handler.fail = null
 
 module.exports = handler

@@ -25,7 +25,7 @@ Bonus: ${poin} XP
         await m.reply(caption),
         json, poin,
         setTimeout(async () => {
-            if (conn.tebaklagu[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.judul}*`, '© sekha', 'Tebak Lirik', `.tebaklirik`, conn.tebaklagu[id][0])
+            if (conn.tebaklagu[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.judul}*`, wm, 'Tebak Lirik', `.tebaklirik`, conn.tebaklagu[id][0])
             delete conn.tebaklagu[id]
         }, timeout)
     ]
@@ -35,5 +35,6 @@ handler.help = ['tebaklagu']
 handler.tags = ['game']
 handler.command = /^tebaklagu$/i
 handler.limit = true
+handler.premium = true
 
 module.exports = handler

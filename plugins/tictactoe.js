@@ -38,8 +38,8 @@ ${arr.slice(6).join('')}
 Menunggu @${room.game.currentTurn.split('@')[0]}
 Ketik *nyerah* untuk nyerah
 `.trim()
-            if (room.x !== room.o) await conn.sendButton(room.x, str, '© sekha', 'Nyerah', 'nyerah', m)
-            await conn.sendButton(room.o, str, '© sekha', 'Nyerah', 'nyerah', m)
+            if (room.x !== room.o) await conn.sendButton(room.x, str, wm, 'Nyerah', 'nyerah', m)
+            await conn.sendButton(room.o, str, wm, 'Nyerah', 'nyerah', m)
         } else {
             room = {
                 id: 'tictactoe-' + (+new Date),

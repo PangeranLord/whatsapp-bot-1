@@ -18,7 +18,7 @@ Ketik ${usedPrefix}ao untuk bantuan
 Bonus: ${poin} XP
     `.trim()
     conn.asahotak[id] = [
-        await conn.sendButton(m.chat, caption, '© sekha', 'Bantuan', '.ao', m),
+        await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.ao', m),
         json, poin,
         setTimeout(async () => {
             if (conn.asahotak[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© sekha', 'Asah Otak', '.asahotak', conn.asahotak[id][0])
@@ -29,7 +29,7 @@ Bonus: ${poin} XP
 handler.help = ['asahotak']
 handler.tags = ['game']
 handler.command = /^asahotak/i
-handler.premium = false
+handler.premium = true
 handler.limit = true
 
 module.exports = handler

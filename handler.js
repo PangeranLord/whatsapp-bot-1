@@ -104,11 +104,11 @@ module.exports = {
           antiBadword: true,
           antiLink: false,
           delete: true,
-          descUpdate: true,
-          download: true,
+          descUpdate: false,
+          download: false,
           expired: 0,
           getmsg: false,
-          read: true,
+          read: false,
           stiker: false,
           viewonce: false,
         }
@@ -140,8 +140,8 @@ module.exports = {
           buggc: true,
           backupTime: 0,
           group: false,
-          jadibot: false,
-          nsfw: true,
+          jadibot: true,
+          nsfw: false,
           restrict: false,
           self: false,
           status: 0,
@@ -436,7 +436,7 @@ module.exports = {
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
 
 ketik *.on delete* untuk mematikan pesan ini
-`.trim(), '© sekha', 'Matikan Antidelete', ',on delete', m.message)
+`.trim(), '©ᴷᴼᴷᴼ ᴾᴬᴺᴳᴱᴿᴬᴺ', 'Matikan Antidelete', ',on delete', m.message)
     this.copyNForward(m.key.remoteJid, m.message).catch(e => console.log(e, m))
   },
   async onCall(json) {
@@ -478,7 +478,7 @@ global.dfail = (type, m, conn) => {
   let msg = {
     rowner: 'akses di tolak! Perintah ini hanya untuk owner bot',
     owner: 'akses di tolak! Perintah ini hanya untuk owner bot',
-    premium: 'akses tidak diizinkan! Fitur ini hanya khusus member premium silakan upgrade ke member premium hub owner terimakasih',
+    premium: '_*akses tidak diizinkan! Fitur Ini Hanya Khusus Istri Saya Saja Silakan Chat Owner Bilang Pengen Jadi Istrinya. terimakasih😙*_',
     group: 'gagal!! perintah ini hanya bisa di group',
     private: 'gagal!! perintah ini hanya bisa di chat private',
     admin: 'akses di tolak! Perintah ini hanya untuk admin Group',

@@ -15,7 +15,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['scplay'].map(v => v + ' query')
 handler.tags = ['downloader']
 handler.command = /^(scplay)$/i
-
+handler.premium = true
 handler.limit = true
 
 module.exports = handler

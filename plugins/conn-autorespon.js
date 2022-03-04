@@ -12,8 +12,8 @@ handler.all = async function (m, { conn, isBlocked }) {
     if (m.isGroup) {
         if (m.mentionedJid.includes(this.user.jid)) {
             await this.send2Button(m.chat,
-                isBanned ? 'erza tidak aktif' : banned ? 'kamu dibanned' : 'erza sudah aktif',
-                '© sekha',
+                isBanned ? '_*Koko Pangeran Tidak Aktif Beb😔*_' : banned ? 'kamu dibanned' : '_*Koko Pangeran Sudah Aktif Kembali Beb😙*_',
+                wm,
                 isBanned ? 'Unban' : banned ? 'owner' : 'Menu',
                 isBanned ? '.unban' : banned ? '.owner' : '.?',
                 m.isGroup ? 'Ban' : isBanned ? 'Unban' : 'Donasi',
@@ -32,8 +32,8 @@ handler.all = async function (m, { conn, isBlocked }) {
 ├ 100 Hari / Rp 40,000
 └────
 
-https://instagram.com/_sekhaa
-`.trim(), '© sekha', 'owner', ',owner', m)
+https://instagram.com/pangerann21_
+`.trim(), wm, 'owner', ',owner', m)
     }
 
     // salam

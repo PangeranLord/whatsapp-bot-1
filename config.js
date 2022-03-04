@@ -1,7 +1,7 @@
 let fs = require('fs')
 let chalk = require('chalk')
 
-global.owner = ['6281284760551', '6281284760551'] // Your Number
+global.owner = ['6287832147584', '6287832147584'] // Your Number
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
 
 global.APIs = { // API Prefix
@@ -28,23 +28,23 @@ global.APIKeys = { // APIKey in here
   'https://api.neoxr.eu.org': 'yourkey', // UNLIMITED
   'https://api.chipa.xyz': 'APIKEY', // REGISTER ON WEB
   'https://cakrayp.herokuapp.com': 'cakrayp24Q6', // UNLIMITED
-  'https://api.xteam.xyz': 'APIKEY', // REGISTER
+  'https://api.xteam.xyz': 'expired', // REGISTER
   'https://zahirr-web.herokuapp.com': 'zahirgans', // UNLIMITED
   'https://api.zeks.me': 'apivinz', // LIMIT 600 day 
 }
 
 
 // Sticker WM
-global.packname = '© erza bot'
-global.author = 'ig @_sekhaa'
+global.packname = '©Koko Pangeran'
+global.author = 'ig @pangerann21_'
 
-global.wm = '© reysekha'
-global.wait = '⏳ tunggu permintaan kamu sedang di proses...'
+global.wm = '©ᴷᴼᴷᴼ ᴾᴬᴺᴳᴱᴿᴬᴺ'
+global.wait = '_*⏳Tunggu Permintaan Kamu Sedang Di Ewe...*_'
 global.eror = '× Upss Erorr silahkan lapor owner'
 global.benar = '✓'
 global.salah = '×'
 global.dikit = 'hampir benar'
-global.footer = '© sekha'
+global.footer = '©ᴷᴼᴷᴼ ᴾᴬᴺᴳᴱᴿᴬᴺ'
 global.lw = 'https://api.reysekha.xyz/api/textpro/greenhoror?apikey=apirey&text='
 global.reyganz= 'https://api.reysekha.xyz/api/wallpaper/ukhty?apikey='
 //global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='

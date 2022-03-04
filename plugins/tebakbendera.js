@@ -20,7 +20,7 @@ Ketik ${usedPrefix}ben untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.tebakbendera[id] = [
-        await conn.sendButton(m.chat, caption, '© sekha', 'Bantuan', '.ben', m),
+        await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.ben', m),
         json, poin,
         setTimeout(async () => {
             if (conn.tebakbendera[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.name}*`, '© sekha', 'Tebak bendera', '.tebakbendera', conn.tebakbendera[id][0])
@@ -32,5 +32,6 @@ handler.help = ['tebakbendera']
 handler.tags = ['game']
 handler.command = /^tebakbendera/i
 handler.limit = true
+handler.premium = true
 
 module.exports = handler

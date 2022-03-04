@@ -18,10 +18,10 @@ Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}teko untuk bantuan
 `.trim()
     conn.tebakkota[id] = [
-        await conn.sendButton(m.chat, caption, '© sekha', 'Bantuan', '.teko', m),
+        await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.teko', m),
         json, poin,
         setTimeout(async () => {
-            if (conn.tebakkota[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© sekha', 'Tebak Kota', '.tebakkota', conn.tebakkota[id][0])
+            if (conn.tebakkota[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, wm, 'Tebak Kota', '.tebakkota', conn.tebakkota[id][0])
             delete conn.tebakkota[id]
         }, timeout)
     ]
@@ -29,7 +29,7 @@ Ketik ${usedPrefix}teko untuk bantuan
 handler.help = ['tebakkota']
 handler.tags = ['game']
 handler.command = /^tebakkota/i
-
+handler.premium = true
 handler.game = true
 
 module.exports = handler

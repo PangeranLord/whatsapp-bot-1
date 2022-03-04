@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
             '-shortest'
         ], 'mp3', 'mp4')
     }
-    await conn.sendFile(m.chat, out, 'out.mp4', 'sukses ✓', m, 0, { thumbnail: out })
+    await conn.sendFile(m.chat, out, 'out.mp4', 'Nih Banh Selesai Di Entod✓\nFollowing IG Owner Tante :\nhttps://instagram.com/pangerann21_\n\n©Koko Pangeran', m, 0, { thumbnail: out })
 }
 handler.help = ['tovideo']
 handler.tags = ['sticker']

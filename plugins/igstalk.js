@@ -35,6 +35,7 @@ ${biography}${external_url ? '\n*External URL:* ' + external_url : ''}
 }
 handler.help = ['igstalk'].map(v => v + ' *username*')
 handler.tags = ['downloader']
+handler.premium = true
 handler.limit = true
 handler.command = /^(igstalk)$/i
 

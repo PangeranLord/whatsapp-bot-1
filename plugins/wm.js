@@ -31,7 +31,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['wm <teks>|<teks>']
 handler.tags = ['sticker']
 handler.command = /^(wm)$/i
-
+handler.premium = true
 handler.limit = 1
 
 module.exports = handler

@@ -23,7 +23,7 @@ Ketik ${usedPrefix}suka untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.susunkata[id] = [
-        await conn.sendButton(m.chat, caption, '© sekha', 'Bantuan', '.suka'),
+        await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.suka'),
         json, poin,
         setTimeout(async () => {
             if (conn.susunkata[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© sekha', 'Susun Kata', '.susunkata')
@@ -35,5 +35,6 @@ handler.help = ['susunkata']
 handler.tags = ['game']
 handler.command = /^susunkata/i
 handler.limit = true
+handler.premium = true
 
 module.exports = handler

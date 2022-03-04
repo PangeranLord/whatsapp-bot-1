@@ -23,7 +23,7 @@ Bonus: ${poin} XP
         await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.ben', m),
         json, poin,
         setTimeout(async () => {
-            if (conn.tebakbendera[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.name}*`, '© sekha', 'Tebak bendera', '.tebakbendera', conn.tebakbendera[id][0])
+            if (conn.tebakbendera[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.name}*`, wm, 'Tebak bendera', '.tebakbendera', conn.tebakbendera[id][0])
             delete conn.tebakbendera[id]
         }, timeout)
     ]

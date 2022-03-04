@@ -18,10 +18,10 @@ Ketik ${usedPrefix}teli untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.tebaklirik[id] = [
-        await conn.sendButton(m.chat, caption, '© sekha', 'Bantuan', `.teli`, m),
+        await conn.sendButton(m.chat, caption, wm, 'Bantuan', `.teli`, m),
         json, poin,
         setTimeout(async () => {
-            if (conn.tebaklirik[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© sekha', 'Tebak Lirik', `.tebaklirik`, conn.tebaklirik[id][0])
+            if (conn.tebaklirik[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, wm, 'Tebak Lirik', `.tebaklirik`, conn.tebaklirik[id][0])
             delete conn.tebaklirik[id]
         }, timeout)
     ]
@@ -30,5 +30,6 @@ handler.help = ['tebaklirik']
 handler.tags = ['game']
 handler.command = /^tebaklirik/i
 handler.limit = true
+handler.premium = true
 
 module.exports = handler

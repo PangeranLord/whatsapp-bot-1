@@ -22,7 +22,7 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey in here
   // 'https://website': 'apikey'
-  'https://api-xcoders.xyz': 'APIKEY', // REGISTER ON WEB
+  'https://api-xcoders.xyz': 'uN8rsK4g', // REGISTER ON WEB
   'https://api.reysekha.xyz': 'apirey', // UNLIMITED
   'https://hardianto.xyz': 'hardianto', // UNLIMITED
   'https://api.neoxr.eu.org': 'yourkey', // UNLIMITED

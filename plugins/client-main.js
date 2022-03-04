@@ -42,7 +42,7 @@ const defaultMenu = {
 »  XP:  %exp / %totalexp
 
 
-   ❏  *E R Z A  I N F O*  ❏
+   ❏  *P A N G E R A N  I N F O*  ❏
 
 »  DATE: %week %date
 »  ISLAMI: %dateIslamic
@@ -51,7 +51,7 @@ const defaultMenu = {
 »  USERS: %rtotalreg
 »  WEB: https://api.erzaa.site
 »  Api: https://api.reysekha.xyz
-»  Owner: https://github.com/inirey
+»  Owner: https://instagram.com/pangerann21_
 
 
 _-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -166,7 +166,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3ButtonLoc(m.chat, await (await fetch(reyganz + 'apirey')).buffer(), text.trim(), '© by sekha', 'Owner Bot', `,owner`, 'Group Wa', `,wanodejs`, 'Donasi owner', `,donasi`, m)
+    await conn.send3ButtonLoc(m.chat, await (await fetch(reyganz + 'apirey')).buffer(), text.trim(), wm, 'Owner Bot', `,owner`, 'Group Wa', `,wanodejs`, 'Donasi owner', `,donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

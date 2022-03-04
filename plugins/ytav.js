@@ -15,7 +15,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['yta2'].map(v => v + 'url')
 handler.tags = ['downloader']
 handler.command = /^(yta2)$/i
-
+handler.premium = true
 handler.limit = true
 
 module.exports = handler

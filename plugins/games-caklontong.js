@@ -18,7 +18,7 @@ Ketik ${usedPrefix}calo untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.caklontong[id] = [
-        await conn.sendButton(m.chat, caption, '© sekha', 'Bantuan', '.calo', m),
+        await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.calo', m),
         json, poin,
         setTimeout(async () => {
             if (conn.caklontong[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*\n${json.deskripsi}`, '© sekha', 'Cak Lontong', '.caklontong')
@@ -29,5 +29,6 @@ Bonus: ${poin} XP
 handler.help = ['caklontong']
 handler.tags = ['game']
 handler.command = /^caklontong/i
+handler.premium = true
 
 module.exports = handler

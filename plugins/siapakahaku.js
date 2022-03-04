@@ -19,7 +19,7 @@ Ketik ${usedPrefix}who untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.siapakahaku[id] = [
-        await conn.sendButton(m.chat, caption, '© sekha', 'Bantuan', '.who'),
+        await conn.sendButton(m.chat, caption, wm, 'Bantuan', '.who'),
         json, poin,
         setTimeout(async () => {
             if (conn.siapakahaku[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© sekha', 'Siapakah Aku', '.siapaaku')
@@ -30,5 +30,7 @@ Bonus: ${poin} XP
 handler.help = ['siapakahaku']
 handler.tags = ['game']
 handler.command = /^siapa(kah)?aku/i
+handler.premium = true
+handler.limit = true
 
 module.exports = handler

@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     im.stdin.write(sticker)
     im.stdin.end()
     im.on('exit', () => {
-      conn.sendFile(m.chat, Buffer.concat(bufs), '', 'sukses ✓', m)
+      conn.sendFile(m.chat, Buffer.concat(bufs), '', 'Nih Banh Selesai Di Entod✓\nFollowing IG Owner Banh :\nhttps://instagram.com/pangerann21_\n\n©Koko Pangeran', m)
     })
   }
 }

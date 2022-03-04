@@ -19,11 +19,11 @@ Ketik ${usedPrefix}hint untuk bantuan
 Bonus: ${poin} XP
     `.trim()
   conn.tebakgambar[id] = [
-    await conn.sendButtonImg(m.chat, await (await fetch(json.img)).buffer(), caption, '© sekha', 'Bantuan', '.hint', m)
+    await conn.sendButtonImg(m.chat, await (await fetch(json.img)).buffer(), caption, wm, 'Bantuan', '.hint', m)
     ,
     json, poin,
     setTimeout(async () => {
-      if (conn.tebakgambar[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© sekha', 'Tebak Gambar', '.tebakgambar', conn.tebakgambar[id][0])
+      if (conn.tebakgambar[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, wm, 'Tebak Gambar', '.tebakgambar', conn.tebakgambar[id][0])
       delete conn.tebakgambar[id]
     }, timeout)
   ]
@@ -31,5 +31,6 @@ Bonus: ${poin} XP
 handler.help = ['tebakgambar']
 handler.tags = ['game']
 handler.command = /^tebakgambar/i
+handler.premium = true
 
 module.exports = handler
